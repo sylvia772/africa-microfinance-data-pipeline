@@ -1,0 +1,28 @@
+# sources.yml
+# Location: models/staging/sources.yml
+#
+# PURPOSE: Declares all raw BigQuery tables as dbt sources.
+# These tables were loaded by the Bronze layer (load_to_bigquery.py)
+# and live in the raw_loans dataset. Declaring them here lets us
+# reference them cleanly in staging models using {{ source() }}
+# instead of hardcoding full BigQuery paths.
+
+version: 2
+
+sources:
+  - name: raw_loans                                    # logical name used in {{ source('raw_loans', ...) }}
+    database: africa-microfinance-analytics            # GCP project ID
+    schema: raw_loans                                  # BigQuery dataset name
+
+    tables:
+      - name: loan_register                            # master list of all loans
+      - name: borrower_profile                         # borrower demographic info
+      - name: default_tracker                          # tracks defaulted loans
+      - name: loans_2020                               # transactional data, 199 rows, 28 cols
+      - name: loans_2021                               # 194 rows, 28 cols — adds Due Diligence, loses Month
+      - name: loans_2022                               # 204 rows, 32 cols — adds Bank Name, Agent Fee etc.
+      - name: loans_2023                               # 209 rows, 34 cols — adds Digital Channel, Loan Officer
+
+      # NOTE: loan_calendar is intentionally excluded.
+      # It is a reference/lookup table with no analytical value
+      # and will not be modelled in Silver or Gold layers.

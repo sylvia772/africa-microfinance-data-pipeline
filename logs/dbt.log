@@ -1,0 +1,74 @@
+[0m00:55:16.097402 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C7632BA3C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C75FBD2D50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C7654A3B10>]}
+
+
+============================== 00:55:16.116934 | 6be1ddfc-89a0-47bc-bd71-d4c3d8cc4938 ==============================
+[0m00:55:16.116934 [info ] [MainThread]: Running with dbt=1.11.10
+[0m00:55:16.119401 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'target_path': 'None', 'cache_selected_only': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\hp\\.dbt', 'debug': 'False', 'static_parser': 'True', 'log_cache_events': 'False', 'empty': 'None', 'quiet': 'False', 'log_format': 'default', 'use_colors': 'True', 'partial_parse': 'True', 'version_check': 'True', 'log_path': 'logs', 'introspect': 'True', 'no_print': 'None', 'fail_fast': 'False', 'invocation_command': 'dbt init africa_microfinance', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'write_json': 'True'}
+[0m00:55:16.208746 [debug] [MainThread]: Starter project path: C:\Users\hp\AppData\Roaming\Python\Python313\site-packages\dbt\include\starter_project
+[0m00:55:16.288667 [info ] [MainThread]: 
+Your new dbt project "africa_microfinance" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m00:55:16.290134 [info ] [MainThread]: Setting up your profile.
+[0m00:56:35.861373 [info ] [MainThread]: Profile africa_microfinance written to C:\Users\hp\.dbt\profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m00:56:35.866983 [debug] [MainThread]: Command `dbt init` succeeded at 00:56:35.866568 after 80.09 seconds
+[0m00:56:35.867858 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C776F590F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C7653857F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C776F0E8B0>]}
+[0m00:56:35.868609 [debug] [MainThread]: Flushing usage events
+[0m00:56:38.151600 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m02:31:00.054682 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021A84E6A3C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021AFFF72D50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021A870A7890>]}
+
+
+============================== 02:31:00.076715 | 2b559a5e-90f1-4f69-b593-cd84f845c123 ==============================
+[0m02:31:00.076715 [info ] [MainThread]: Running with dbt=1.11.10
+[0m02:31:00.080062 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'target_path': 'None', 'cache_selected_only': 'False', 'warn_error': 'None', 'empty': 'False', 'debug': 'False', 'static_parser': 'True', 'log_cache_events': 'False', 'profiles_dir': 'C:\\Users\\hp\\.dbt', 'log_format': 'default', 'quiet': 'False', 'use_colors': 'True', 'partial_parse': 'True', 'version_check': 'True', 'log_path': 'logs', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'fail_fast': 'False', 'invocation_command': 'dbt run --select stg_borrower_profile', 'no_print': 'None', 'send_anonymous_usage_stats': 'True', 'indirect_selection': 'eager', 'write_json': 'True', 'use_experimental_parser': 'False'}
+[0m02:31:00.082244 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\hp\Desktop\AfricaMicrofinance\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m02:31:00.085579 [debug] [MainThread]: Command `dbt run` failed at 02:31:00.084991 after 0.76 seconds
+[0m02:31:00.087210 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021A8704F490>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021A8707A690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021A87056BE0>]}
+[0m02:31:00.089052 [debug] [MainThread]: Flushing usage events
+[0m02:31:01.109145 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m00:34:29.469935 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018E1F80A3C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018E1C112D50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018E21A47890>]}
+
+
+============================== 00:34:29.480758 | 21967eec-4d59-4604-8275-41dd52031e4c ==============================
+[0m00:34:29.480758 [info ] [MainThread]: Running with dbt=1.11.10
+[0m00:34:29.482470 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'write_json': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\hp\\.dbt', 'debug': 'False', 'static_parser': 'True', 'log_cache_events': 'False', 'empty': 'False', 'log_format': 'default', 'quiet': 'False', 'use_colors': 'True', 'partial_parse': 'True', 'version_check': 'True', 'log_path': 'logs', 'introspect': 'True', 'invocation_command': 'dbt run', 'fail_fast': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'target_path': 'None'}
+[0m00:34:29.483043 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\hp\Desktop\AfricaMicrofinance\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m00:34:29.484472 [debug] [MainThread]: Command `dbt run` failed at 00:34:29.484264 after 0.36 seconds
+[0m00:34:29.484917 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018E219EF490>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018E21A1A690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018E219F6BE0>]}
+[0m00:34:29.485350 [debug] [MainThread]: Flushing usage events
+[0m00:34:30.757503 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:42:15.120470 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020C0E74A3C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020C0B082D50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020C10987890>]}
+
+
+============================== 23:42:15.130866 | d01cfe38-2f50-4aa8-8181-0da7395b2069 ==============================
+[0m23:42:15.130866 [info ] [MainThread]: Running with dbt=1.11.10
+[0m23:42:15.133965 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'use_experimental_parser': 'False', 'cache_selected_only': 'False', 'warn_error': 'None', 'empty': 'False', 'debug': 'False', 'static_parser': 'True', 'log_cache_events': 'False', 'profiles_dir': 'C:\\Users\\hp\\.dbt', 'quiet': 'False', 'log_format': 'default', 'use_colors': 'True', 'partial_parse': 'True', 'version_check': 'True', 'log_path': 'logs', 'introspect': 'True', 'invocation_command': 'dbt run --select mart_borrower_profile', 'fail_fast': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True', 'indirect_selection': 'eager', 'write_json': 'True', 'target_path': 'None'}
+[0m23:42:15.134860 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\hp\Desktop\AfricaMicrofinance\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m23:42:15.136181 [debug] [MainThread]: Command `dbt run` failed at 23:42:15.136010 after 0.33 seconds
+[0m23:42:15.136635 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020C1092F490>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020C1095A690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020C10936BE0>]}
+[0m23:42:15.137087 [debug] [MainThread]: Flushing usage events
+[0m23:42:16.465515 [debug] [MainThread]: An error was encountered while trying to flush usage events

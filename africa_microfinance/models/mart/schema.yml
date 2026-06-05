@@ -1,0 +1,67 @@
+version: 2
+
+models:
+  - name: mart_loans
+    description: "Unified loan transactions across 2020-2023 for Nairobi, Accra and Kigali"
+    columns:
+      - name: full_name
+        description: "Borrower full name"
+        tests:
+          - not_null
+      - name: branch
+        description: "City branch — Nairobi, Accra or Kigali"
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['Nairobi', 'Accra', 'Kigali']
+      - name: loan_status
+        tests:
+          - accepted_values:
+              values: ['cleared', 'defaulted']
+      - name: repayment_status
+        tests:
+          - accepted_values:
+              values: ['defaulted', 'on_time', 'early', 'late_gt5days', 'late_lt5days']
+      - name: currency
+        tests:
+          - accepted_values:
+              values: ['KES', 'GHS', 'RWF', 'USD']
+      - name: loan_year
+        description: "Loan year — must be between 2020 and 2023"
+        tests:
+          - accepted_values:
+              values: [2020, 2021, 2022, 2023]
+              quote: false
+
+  - name: mart_borrower_profile
+    description: "One row per borrower summarising full loan history"
+    columns:
+      - name: full_name
+        tests:
+          - not_null
+      - name: total_loans
+        tests:
+          - not_null
+      - name: branch
+        tests:
+          - not_null
+
+  - name: mart_branch_perf
+    description: "Branch performance metrics per year"
+    columns:
+      - name: branch
+        tests:
+          - not_null
+      - name: loan_year
+        tests:
+          - not_null
+
+  - name: mart_loan_officer
+    description: "Loan officer performance metrics for 2023"
+    columns:
+      - name: loan_officer
+        tests:
+          - not_null
+      - name: branch
+        tests:
+          - not_null

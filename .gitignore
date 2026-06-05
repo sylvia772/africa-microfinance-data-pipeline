@@ -1,0 +1,17 @@
+# Service account keys — NEVER push to GitHub
+*.json
+
+# dbt generated folders
+africa_microfinance/target/
+africa_microfinance/dbt_packages/
+africa_microfinance/logs/
+
+# Python
+__pycache__/
+*.pyc
+
+# Excel files
+*.xlsx
+
+# Parquet and JSON exports
+*.parquet
